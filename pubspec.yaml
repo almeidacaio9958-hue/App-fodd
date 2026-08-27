@@ -1,5 +1,5 @@
 name: app_ifood_marketplace
-description: "App Marketplace Delivery estilo iFood"
+description: "App Marketplace Delivery Multi-Lojas completo estilo iFood"
 publish_to: 'none'
 
 version: 1.0.0+1
@@ -11,6 +11,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
