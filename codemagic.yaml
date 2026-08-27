@@ -5,18 +5,15 @@ workflows:
     instance_type: mac_mini_m1
     environment:
       flutter: stable
-      xcode: latest
-      cocoapods: default
     scripts:
-      - name: Set up local.properties
+      - name: Create Android project template
         script: |
-          echo "flutter.sdk=$HOME/programs/flutter" > "$CM_BUILD_DIR/android/local.properties"
+          flutter create . --platforms=android --org com.example
       - name: Get Flutter packages
         script: |
           flutter packages pub get
-      - name: Build APK with Flutter
+      - name: Build APK
         script: |
           flutter build apk --release
     artifacts:
       - build/**/outputs/**/*.apk
-      - flutter_drive.log
