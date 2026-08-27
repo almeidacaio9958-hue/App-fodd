@@ -20,10 +20,3 @@ workflows:
     artifacts:
       - build/**/outputs/**/*.apk
       - flutter_drive.log
-    publishing:
-      email:
-        recipients:
-          - user_email
-        notify:
-          success: true
-          failure: true
